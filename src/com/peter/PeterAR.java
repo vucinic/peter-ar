@@ -37,14 +37,24 @@ public class PeterAR {
 			if (!new String(globalHeader).trim().equals("!<arch>")) {
 				return null;
 			}
+			AR fileNameAR = null;
 			while (buffer.position() < file.length()) {
 				AR ar = new AR();
 
 				byte temp[] = new byte[16];
 				buffer.get(temp);
 				ar.filename = new String(temp).trim();
-				ar.filename = ar.filename.substring(0, ar.filename.length() - 1);
+				if (!ar.filename.equals("/") && !ar.filename.equals("//")) {
+					if (ar.filename.length() > 1 && ar.filename.substring(ar.filename.length() - 1, ar.filename.length()).equals("/")) {
+						ar.filename = ar.filename.substring(0, ar.filename.length() - 1);
+					} else if (ar.filename.charAt(0) == '/') {
+						int offset = Integer.parseInt(ar.filename.substring(1));
+						String allFilenames = new String(fileNameAR.bytes);
+						int lastIndex = allFilenames.indexOf('/', offset);
+						ar.filename = allFilenames.substring(offset, lastIndex);
+					}
 
+				}
 				temp = new byte[12];
 				buffer.get(temp);
 				ar.tempstamp = new String(temp).trim();
@@ -77,6 +87,10 @@ public class PeterAR {
 				}
 
 				data.add(ar);
+
+				if (ar.filename.equals("//")) {
+					fileNameAR = ar;
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
