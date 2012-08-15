@@ -86,7 +86,9 @@ public class PeterAR {
 					buffer.get();
 				}
 
-				data.add(ar);
+				if (!ar.filename.equals("/") && !ar.filename.equals("//")) {
+					data.add(ar);
+				}
 
 				if (ar.filename.equals("//")) {
 					fileNameAR = ar;
