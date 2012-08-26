@@ -16,7 +16,7 @@ public class PeterAR {
 			System.err.println("read error");
 		} else {
 			for (AR ar : data) {
-				System.out.println(ar);
+				System.out.println("ar=" + ar);
 			}
 		}
 	}
