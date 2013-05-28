@@ -1,19 +1,29 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.peter</groupId>
-  <artifactId>peter-ar</artifactId>
-  <version>20130520</version>
-  <build>
-    <sourceDirectory>src</sourceDirectory>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.0</version>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.peter</groupId>
+	<artifactId>peter-ar</artifactId>
+	<version>20130520</version>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<name>Peter AR Lirary</name>
+	<description>A java library to read the file that is unix archive format.
+My blog is : http://peter.kingofcoders.com</description>
+	<url>https://code.google.com/p/peter-ar/</url>
+	<scm>
+		<url>https://peter-ar.googlecode.com/svn/trunk/</url>
+		<developerConnection>Peter</developerConnection>
+		<connection>https://peter-ar.googlecode.com/svn/trunk/</connection>
+	</scm>
 </project>
