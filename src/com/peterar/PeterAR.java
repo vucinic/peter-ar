@@ -1,4 +1,4 @@
-package com.peter;
+package com.peterar;
 
 import java.io.File;
 import java.io.RandomAccessFile;
