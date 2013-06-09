@@ -5,7 +5,6 @@
 	<artifactId>peter-ar</artifactId>
 	<version>20130520</version>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
