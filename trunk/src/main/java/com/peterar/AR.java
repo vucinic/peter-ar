@@ -10,6 +10,8 @@ public class AR {
 	public byte bytes[];
 
 	public String toString() {
-		return "filename: " + filename + ",\ttempstamp: " + tempstamp + ",\townerID: " + ownerID + ", groupID: " + groupID + ", fileMode: " + fileMode + ", fileSize: " + fileSize;
+		return "filename: " + filename + ",\ttempstamp: " + tempstamp
+				+ ",\townerID: " + ownerID + ", groupID: " + groupID
+				+ ", fileMode: " + fileMode + ", fileSize: " + fileSize;
 	}
 }
