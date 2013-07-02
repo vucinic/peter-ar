@@ -10,9 +10,7 @@ public class PeterAR {
 
 	public static void main(String[] args) {
 		PeterAR peterAR = new PeterAR();
-		Vector<AR> data = peterAR
-				.init(new File(
-						"/Users/peter/install/i586-peter-elf-newlib/i586-peter-elf/lib/libc.a"));
+		Vector<AR> data = peterAR.init(new File("/Users/peter/install/i586-peter-elf-newlib/i586-peter-elf/lib/libc.a"));
 		// Vector<AR> data = peterAR.init(new File("/root/fuck"));
 		if (data == null) {
 			System.err.println("read error");
@@ -47,11 +45,8 @@ public class PeterAR {
 				buffer.get(temp);
 				ar.filename = new String(temp).trim();
 				if (!ar.filename.equals("/") && !ar.filename.equals("//")) {
-					if (ar.filename.length() > 1
-							&& ar.filename.substring(ar.filename.length() - 1,
-									ar.filename.length()).equals("/")) {
-						ar.filename = ar.filename.substring(0,
-								ar.filename.length() - 1);
+					if (ar.filename.length() > 1 && ar.filename.substring(ar.filename.length() - 1, ar.filename.length()).equals("/")) {
+						ar.filename = ar.filename.substring(0, ar.filename.length() - 1);
 					} else if (ar.filename.charAt(0) == '/') {
 						int offset = Integer.parseInt(ar.filename.substring(1));
 						String allFilenames = new String(fileNameAR.bytes);
