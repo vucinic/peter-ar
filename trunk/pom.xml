@@ -16,7 +16,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	<name>Peter AR Lirary</name>
+	<name>Peter AR Library</name>
 	<description>A java library to read the file that is unix archive format.
 My blog is : http://peter.kingofcoders.com</description>
 	<url>https://code.google.com/p/peter-ar/</url>
