@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.peter</groupId>
 	<artifactId>peter-ar</artifactId>
-	<version>20141215</version>
+	<version>20150128</version>
 	<build>
 		<plugins>
 			<plugin>
