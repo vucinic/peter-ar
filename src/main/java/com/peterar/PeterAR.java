@@ -11,7 +11,6 @@ public class PeterAR {
 	public static void main(String[] args) {
 		PeterAR peterAR = new PeterAR();
 		Vector<AR> data = peterAR.init(new File("/Users/peter/install/i586-peter-elf-newlib/i586-peter-elf/lib/libc.a"));
-		// Vector<AR> data = peterAR.init(new File("/root/fuck"));
 		if (data == null) {
 			System.err.println("read error");
 		} else {
